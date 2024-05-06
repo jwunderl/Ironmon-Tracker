@@ -268,7 +268,7 @@ function DataHelper.buildTrackerScreenDisplay(forceView)
 				trackedMove = definitelyKnownMoves[i]
 			else
 				-- todo: consider marking this with a bit to display asterisk next to it
-				trackedMove = maybeKnownMoves[i - #definitelyKnownMoves]
+				trackedMove = maybeKnownMoves[i - #definitelyKnownMoves] or {}
 			end
 			if MoveData.isValid(trackedMove.id) then
 				moveToCopy = MoveData.Moves[trackedMove.id]
